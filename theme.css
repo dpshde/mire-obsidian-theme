@@ -1,0 +1,1130 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   Mire 1.0.0
+   A warm, minimal Obsidian theme with coordinated Afterlight and Afterdark palettes.
+   Inspired by: https://github.com/monarcode/mire-theme-zed
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+.theme-light {
+  /* ─────────────────── Base Surfaces ─────────────────── */
+  --background-primary:         #FFF8EC;
+  --background-primary-alt:   #FEF0DF;
+  --background-secondary:     #FFF4E5;
+  --background-secondary-alt: #F8E7D2;
+  --background-modifier-border:            rgba(59,44,26,0.12);
+  --background-modifier-border-hover:      rgba(59,44,26,0.20);
+  --background-modifier-border-focus:      #C44900;
+  --background-modifier-form-field:        #FEF0DF;
+  --background-modifier-form-field-highlighted: #F8E7D2;
+  --background-modifier-box-shadow:        rgba(42,32,26,0.06);
+  --background-modifier-success:           rgba(47,118,111,0.12);
+  --background-modifier-error:             rgba(164,62,46,0.12);
+  --background-modifier-error-hover:       rgba(164,62,46,0.18);
+  --background-modifier-cover:             rgba(255,248,236,0.90);
+  --background-modifier-hover:             rgba(196,73,0,0.06);
+  --background-modifier-active-hover:      rgba(196,73,0,0.10);
+  --background-modifier-message:           #FEF0DF;
+  --background-modifier-accent:            #C44900;
+
+  /* ─────────────────── Text ─────────────────── */
+  --text-normal:        #2A201A;
+  --text-muted:         #7D6B58;
+  --text-faint:         #9B876B;
+  --text-on-accent:     #FFF8EC;
+  --text-error:         #A43E2E;
+  --text-success:       #2F766F;
+  --text-selection:     rgba(196,73,0,0.18);
+  --text-highlight-bg:  rgba(196,73,0,0.12);
+
+  /* ─────────────────── Accent & Interactive ─────────────────── */
+  --interactive-normal:       #F8E7D2;
+  --interactive-hover:        #F4DDC2;
+  --interactive-accent:       #C44900;
+  --interactive-accent-hover: #B95622;
+  --interactive-success:      #2F766F;
+
+  /* ─────────────────── Scrollbar ─────────────────── */
+  --scrollbar-bg:                transparent;
+  --scrollbar-thumb-bg:          rgba(125,107,88,0.18);
+  --scrollbar-active-thumb-bg:   rgba(125,107,88,0.30);
+
+  /* ─────────────────── Title Bar ─────────────────── */
+  --titlebar-background:         #FFF8EC;
+  --titlebar-background-focused: #FFF8EC;
+  --titlebar-text-color:         #7D6B58;
+  --titlebar-text-color-focused: #2A201A;
+
+  /* ─────────────────── Status Bar ─────────────────── */
+  --status-bar-background:       #FFF4E5;
+  --status-bar-text-color:       #7D6B58;
+
+  /* ─────────────────── Sidebar ─────────────────── */
+  --side-bar-background:         #FFF4E5;
+  --side-bar-text-color:         #7D6B58;
+
+  /* ─────────────────── Tabs ─────────────────── */
+  --tab-background:                    #FFF4E5;
+  --tab-background-active:             #FFF8EC;
+  --tab-text-color:                    #7D6B58;
+  --tab-text-color-active:             #2A201A;
+  --tab-text-color-focused:            #2A201A;
+  --tab-text-color-focused-active:     #2A201A;
+  --tab-text-color-focused-highlighted:#C44900;
+  --tab-text-color-focused-active-current: #2A201A;
+  --tab-outline-color:                 rgba(59,44,26,0.10);
+
+  /* ─────────────────── Dividers & Ribbons ─────────────────── */
+  --divider-color:              rgba(59,44,26,0.10);
+  --ribbon-background:          #FFF8EC;
+  --ribbon-background-collapsed:#FFF8EC;
+
+  /* ─────────────────── Vault Profile & Graph ─────────────────── */
+  --vault-profile-color:       #C44900;
+  --vault-profile-color-hover: #B95622;
+  --graph-node:                #C44900;
+  --graph-node-unresolved:     #9B876B;
+  --graph-node-tag:            #2F766F;
+  --graph-node-attachment:     #A76B1B;
+  --graph-line:                rgba(125,107,88,0.15);
+  --graph-line-highlight:      rgba(125,107,88,0.28);
+  --graph-text:                #7D6B58;
+
+  /* ─────────────────── Links (Obsidian native variables) ─────────────────── */
+  --link-color:                #C44900;
+  --link-color-hover:          #B95622;
+  --link-unresolved-color:     #9B876B;
+  --link-unresolved-decoration-color: #9B876B;
+  --link-external-color:       #C44900;
+  --link-external-color-hover: #B95622;
+
+  /* ─────────────────── Nav / Sidebar selection ─────────────────── */
+  --nav-item-color:              #7D6B58;
+  --nav-item-color-hover:        #2A201A;
+  --nav-item-color-active:       #C44900;
+  --nav-item-color-selected:     #2A201A;
+  --nav-item-background-hover:   rgba(196,73,0,0.06);
+  --nav-item-background-active:  rgba(196,73,0,0.08);
+  --nav-item-background-selected:rgba(196,73,0,0.06);
+  --nav-indentation-guide-color: rgba(59,44,26,0.10);
+
+  /* ─────────────────── Tags ─────────────────── */
+  --tag-color:         #A76B1B;
+  --tag-background:    rgba(167,107,27,0.10);
+  --tag-background-hover: rgba(167,107,27,0.18);
+  --tag-border-color:  rgba(167,107,27,0.20);
+  --tag-border-color-hover: rgba(167,107,27,0.30);
+
+  /* ─────────────────── Popover / Hover preview ─────────────────── */
+  --popover-background:       #FEF0DF;
+  --popover-border-color:     rgba(59,44,26,0.10);
+  --tooltip-background:       #2A201A;
+  --tooltip-color:            #FFF8EC;
+
+  /* ─────────────────── Mire Palette (local reuse) ─────────────────── */
+  --mire-bg-deep:    #FFF8EC;
+  --mire-bg-mid:     #FEF0DF;
+  --mire-bg-warm:    #FFF4E5;
+  --mire-bg-cream:   #F8E7D2;
+  --mire-fg:         #2A201A;
+  --mire-fg-muted:   #7D6B58;
+  --mire-fg-faint:   #9B876B;
+  --mire-orange:     #C44900;
+  --mire-orange-soft:#B95622;
+  --mire-gold:       #A76B1B;
+  --mire-gold-soft:  #9A641A;
+  --mire-teal:       #2F766F;
+  --mire-teal-soft:  #2F6F75;
+  --mire-rose:       #8A4A63;
+  --mire-rose-soft:  #9B536F;
+  --mire-cream:      #8B5E20;
+  --mire-red:        #A43E2E;
+  --mire-surface:    #F8E7D2;
+}
+
+.theme-dark {
+  /* ─────────────────── Base Surfaces ─────────────────── */
+  --background-primary:         #010203;
+  --background-primary-alt:   #020D12;
+  --background-secondary:     #010203;
+  --background-secondary-alt: #06181C;
+  --background-modifier-border:            rgba(239,214,172,0.10);
+  --background-modifier-border-hover:      rgba(239,214,172,0.18);
+  --background-modifier-border-focus:      #D26A2E;
+  --background-modifier-form-field:        #020D12;
+  --background-modifier-form-field-highlighted: #06181C;
+  --background-modifier-box-shadow:        rgba(0,0,0,0.35);
+  --background-modifier-success:           rgba(127,191,159,0.12);
+  --background-modifier-error:             rgba(223,107,79,0.15);
+  --background-modifier-error-hover:       rgba(223,107,79,0.22);
+  --background-modifier-cover:             rgba(1,2,3,0.85);
+  --background-modifier-hover:             rgba(24,58,55,0.45);
+  --background-modifier-active-hover:      rgba(24,58,55,0.75);
+  --background-modifier-message:           #020D12;
+  --background-modifier-accent:            #D26A2E;
+
+  /* ─────────────────── Text ─────────────────── */
+  --text-normal:        #EFD6AC;
+  --text-muted:         #A89474;
+  --text-faint:         #756A5C;
+  --text-on-accent:     #010203;
+  --text-error:         #DF6B4F;
+  --text-success:       #7FBF9F;
+  --text-selection:     rgba(210,106,46,0.22);
+  --text-highlight-bg:  rgba(210,106,46,0.18);
+
+  /* ─────────────────── Accent & Interactive ─────────────────── */
+  --interactive-normal:       #183A37;
+  --interactive-hover:        #183A37;
+  --interactive-accent:       #D26A2E;
+  --interactive-accent-hover: #E46128;
+  --interactive-success:      #7FBF9F;
+
+  /* ─────────────────── Scrollbar ─────────────────── */
+  --scrollbar-bg:                transparent;
+  --scrollbar-thumb-bg:          rgba(239,214,172,0.12);
+  --scrollbar-active-thumb-bg:   rgba(239,214,172,0.22);
+
+  /* ─────────────────── Title Bar ─────────────────── */
+  --titlebar-background:         #010203;
+  --titlebar-background-focused: #010203;
+  --titlebar-text-color:         #A89474;
+  --titlebar-text-color-focused: #EFD6AC;
+
+  /* ─────────────────── Status Bar ─────────────────── */
+  --status-bar-background:       #010203;
+  --status-bar-text-color:       #A89474;
+
+  /* ─────────────────── Sidebar ─────────────────── */
+  --side-bar-background:         #010203;
+  --side-bar-text-color:         #A89474;
+
+  /* ─────────────────── Tabs ─────────────────── */
+  --tab-background:                    #010203;
+  --tab-background-active:             #010203;
+  --tab-text-color:                    #A89474;
+  --tab-text-color-active:             #EFD6AC;
+  --tab-text-color-focused:            #EFD6AC;
+  --tab-text-color-focused-active:     #EFD6AC;
+  --tab-text-color-focused-highlighted:#D26A2E;
+  --tab-text-color-focused-active-current: #EFD6AC;
+  --tab-outline-color:                 rgba(239,214,172,0.10);
+
+  /* ─────────────────── Dividers & Ribbons ─────────────────── */
+  --divider-color:              rgba(239,214,172,0.10);
+  --ribbon-background:          #010203;
+  --ribbon-background-collapsed:#010203;
+
+  /* ─────────────────── Vault Profile & Graph ─────────────────── */
+  --vault-profile-color:       #D26A2E;
+  --vault-profile-color-hover: #E46128;
+  --graph-node:                #D26A2E;
+  --graph-node-unresolved:     #756A5C;
+  --graph-node-tag:            #7FBF9F;
+  --graph-node-attachment:     #E7B15A;
+  --graph-line:                rgba(239,214,172,0.12);
+  --graph-line-highlight:      rgba(239,214,172,0.25);
+  --graph-text:                #A89474;
+
+  /* ─────────────────── Links (Obsidian native variables) ─────────────────── */
+  --link-color:                #D26A2E;
+  --link-color-hover:          #E46128;
+  --link-unresolved-color:     #756A5C;
+  --link-unresolved-decoration-color: #756A5C;
+  --link-external-color:       #D26A2E;
+  --link-external-color-hover: #E46128;
+
+  /* ─────────────────── Nav / Sidebar selection ─────────────────── */
+  --nav-item-color:              #A89474;
+  --nav-item-color-hover:        #EFD6AC;
+  --nav-item-color-active:       #D26A2E;
+  --nav-item-color-selected:     #EFD6AC;
+  --nav-item-background-hover:   rgba(24,58,55,0.40);
+  --nav-item-background-active:  rgba(210,106,46,0.10);
+  --nav-item-background-selected:rgba(210,106,46,0.08);
+  --nav-indentation-guide-color: rgba(239,214,172,0.08);
+
+  /* ─────────────────── Tags ─────────────────── */
+  --tag-color:         #E7B15A;
+  --tag-background:    rgba(231,177,90,0.10);
+  --tag-background-hover: rgba(231,177,90,0.18);
+  --tag-border-color:  rgba(231,177,90,0.18);
+  --tag-border-color-hover: rgba(231,177,90,0.28);
+
+  /* ─────────────────── Popover / Hover preview ─────────────────── */
+  --popover-background:       #020D12;
+  --popover-border-color:     rgba(239,214,172,0.08);
+  --tooltip-background:       #EFD6AC;
+  --tooltip-color:            #010203;
+
+  /* ─────────────────── Mire Palette (local reuse) ─────────────────── */
+  --mire-bg-deep:    #010203;
+  --mire-bg-mid:     #020D12;
+  --mire-bg-warm:    #04151F;
+  --mire-bg-teal:    #06181C;
+  --mire-fg:         #EFD6AC;
+  --mire-fg-muted:   #A89474;
+  --mire-fg-faint:   #756A5C;
+  --mire-orange:     #D26A2E;
+  --mire-orange-soft:#E46128;
+  --mire-gold:       #E7B15A;
+  --mire-gold-soft:  #F0C36A;
+  --mire-teal:       #7BBCAB;
+  --mire-teal-soft:  #72B8AE;
+  --mire-rose:       #C07898;
+  --mire-rose-soft:  #A35F7C;
+  --mire-cream:      #E6C27B;
+  --mire-red:        #DF6B4F;
+  --mire-surface:    #183A37;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   EDITOR — Source & Live Preview
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+.markdown-source-view.mod-cm6 .cm-content,
+.markdown-source-view,
+.markdown-preview-view {
+  color: var(--mire-fg);
+}
+
+/* ── Headings ── */
+.cm-s-obsidian .cm-header,
+.HyperMD-header {
+  color: var(--mire-fg);
+  font-weight: 700;
+}
+
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6 {
+  color: var(--mire-fg);
+  font-weight: 700;
+}
+
+/* ── Bold / Italic / Strikethrough ── */
+.cm-s-obsidian .cm-strong,
+.markdown-rendered strong {
+  color: var(--mire-fg);
+  font-weight: 700;
+}
+.cm-s-obsidian .cm-em,
+.markdown-rendered em {
+  color: #5C4A37;
+  font-style: italic;
+}
+.cm-s-obsidian .cm-strikethrough,
+.markdown-rendered del {
+  color: var(--mire-fg-muted);
+  text-decoration-color: var(--mire-orange);
+}
+
+/* ── Links (CRITICAL: override blue/purple defaults) ── */
+.cm-s-obsidian .cm-link,
+.cm-s-obsidian .cm-hmd-internal-link,
+.cm-s-obsidian .cm-url,
+.markdown-source-view.mod-cm6 .cm-link,
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link,
+.markdown-source-view.mod-cm6 .cm-url,
+.markdown-rendered a.internal-link,
+.markdown-rendered a.internal-link:visited,
+.markdown-rendered a.external-link,
+.markdown-rendered a.external-link:visited,
+.markdown-rendered a,
+.markdown-rendered a:visited {
+  color: var(--mire-orange) !important;
+  text-decoration-color: rgba(196,73,0,0.35) !important;
+}
+
+.cm-s-obsidian .cm-link:hover,
+.cm-s-obsidian .cm-hmd-internal-link:hover,
+.cm-s-obsidian .cm-url:hover,
+.markdown-source-view.mod-cm6 .cm-link:hover,
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
+.markdown-rendered a.internal-link:hover,
+.markdown-rendered a.external-link:hover,
+.markdown-rendered a:hover {
+  color: var(--mire-orange-soft) !important;
+  text-decoration-color: var(--mire-orange) !important;
+}
+
+/* Unresolved links */
+.cm-s-obsidian .cm-hmd-internal-link[data-link-status="unresolved"],
+.markdown-rendered a.internal-link.is-unresolved {
+  color: var(--mire-fg-faint) !important;
+  text-decoration-color: var(--mire-fg-faint) !important;
+}
+
+/* ── Lists ── */
+.cm-s-obsidian .cm-formatting-list,
+.markdown-rendered ul > li::marker,
+.markdown-rendered ol > li::marker {
+  color: var(--mire-orange);
+}
+
+/* ── Quotes ── */
+.cm-s-obsidian .cm-quote,
+.markdown-rendered blockquote {
+  color: var(--mire-fg-muted);
+  border-left: 3px solid var(--mire-orange);
+  background: rgba(196,73,0,0.05);
+}
+
+/* ── Horizontal Rule ── */
+.cm-s-obsidian .cm-hr,
+.markdown-rendered hr {
+  border-color: rgba(59,44,26,0.10);
+}
+
+/* ── Inline Code ── */
+.cm-s-obsidian .cm-inline-code,
+.markdown-rendered code {
+  color: var(--mire-cream);
+  background: rgba(196,73,0,0.06);
+  font-family: var(--font-monospace);
+}
+
+/* ── Code Blocks ── */
+.cm-s-obsidian .HyperMD-codeblock,
+.markdown-rendered pre {
+  background: var(--mire-bg-mid);
+  border: 1px solid rgba(59,44,26,0.08);
+}
+.cm-s-obsidian .HyperMD-codeblock-begin,
+.cm-s-obsidian .HyperMD-codeblock-end {
+  color: var(--mire-fg-faint);
+}
+
+/* ── Highlight / Selection / Search ── */
+.cm-s-obsidian .cm-highlight,
+.markdown-rendered mark {
+  background: rgba(196,73,0,0.15);
+  color: #1B140F;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   SYNTAX HIGHLIGHTING — CodeMirror6 tokens
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* Keyword */
+.cm-s-obsidian .cm-keyword { color: var(--mire-orange); }
+
+/* Built-in / special names */
+.cm-s-obsidian .cm-builtin { color: var(--mire-orange-soft); }
+
+/* Atoms / booleans / constants */
+.cm-s-obsidian .cm-atom   { color: var(--mire-gold); }
+.cm-s-obsidian .cm-number { color: var(--mire-gold); }
+
+/* Definitions / variables */
+.cm-s-obsidian .cm-def       { color: var(--mire-gold-soft); }
+.cm-s-obsidian .cm-variable   { color: var(--mire-fg); }
+.cm-s-obsidian .cm-variable-2 { color: #6E563E; }
+.cm-s-obsidian .cm-variable-3 { color: var(--mire-teal-soft); }
+
+/* Properties */
+.cm-s-obsidian .cm-property { color: var(--mire-gold-soft); }
+
+/* Operators */
+.cm-s-obsidian .cm-operator { color: var(--mire-gold-soft); }
+
+/* Comments */
+.cm-s-obsidian .cm-comment { color: rgba(138,122,104,0.50); font-style: italic; }
+
+/* Strings */
+.cm-s-obsidian .cm-string  { color: var(--mire-cream); }
+.cm-s-obsidian .cm-string-2 { color: var(--mire-cream); }
+
+/* Tags / qualifiers */
+.cm-s-obsidian .cm-tag       { color: var(--mire-teal); }
+.cm-s-obsidian .cm-qualifier { color: var(--mire-teal); }
+
+/* Types */
+.cm-s-obsidian .cm-type { color: var(--mire-rose); }
+
+/* Attributes */
+.cm-s-obsidian .cm-attribute { color: var(--mire-gold-soft); }
+
+/* Meta / punctuation */
+.cm-s-obsidian .cm-meta       { color: var(--mire-fg-muted); }
+.cm-s-obsidian .cm-punctuation  { color: var(--mire-fg-muted); }
+
+/* Brackets */
+.cm-s-obsidian .cm-bracket { color: #5C4A37; }
+
+/* Active line */
+.cm-s-obsidian .cm-active-line {
+  background: rgba(196,73,0,0.05);
+}
+
+/* Gutter */
+.cm-s-obsidian .cm-gutterElement {
+  color: var(--mire-fg-faint);
+}
+.cm-s-obsidian .cm-gutterElement.cm-active {
+  color: var(--mire-fg);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   PREVIEW MODE — Markdown rendered view
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* Tables */
+.markdown-rendered table {
+  border-collapse: collapse;
+}
+.markdown-rendered th {
+  background: rgba(196,73,0,0.06);
+  color: var(--mire-fg);
+  border-bottom: 2px solid var(--mire-orange);
+  font-weight: 600;
+}
+.markdown-rendered td {
+  border-bottom: 1px solid rgba(59,44,26,0.08);
+  color: var(--mire-fg);
+}
+.markdown-rendered tr:nth-child(even) td {
+  background: rgba(196,73,0,0.03);
+}
+
+/* Tags / mentions */
+.markdown-rendered .tag {
+  background: var(--tag-background);
+  color: var(--tag-color);
+  border: 1px solid var(--tag-border-color);
+}
+.markdown-rendered .tag:hover {
+  background: var(--tag-background-hover);
+  color: #8F5C18;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   TASKS / CHECKBOXES
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+.markdown-rendered .task-list-item-checkbox {
+  border: 2px solid var(--mire-fg-muted);
+  background: var(--mire-bg-mid);
+  border-radius: 3px;
+}
+.markdown-rendered .task-list-item-checkbox:checked {
+  background: var(--mire-teal);
+  border-color: var(--mire-teal);
+  box-shadow: inset 0 0 0 2px var(--mire-bg-deep);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   CALLOUTS — map every Obsidian callout type to Mire palette
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+.callout {
+  --callout-padding: 12px 16px;
+  border-radius: 6px;
+}
+
+.callout[data-callout="info"],
+.callout[data-callout="todo"] {
+  --callout-color: 47,111,118;
+  --callout-icon: lucide-info;
+}
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="important"] {
+  --callout-color: 47,118,111;
+  --callout-icon: lucide-flame;
+}
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] {
+  --callout-color: 167,107,27;
+  --callout-icon: lucide-alert-triangle;
+}
+.callout[data-callout="danger"],
+.callout[data-callout="error"] {
+  --callout-color: 164,62,46;
+  --callout-icon: lucide-zap;
+}
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+  --callout-color: 47,118,111;
+  --callout-icon: lucide-check-circle;
+}
+.callout[data-callout="note"] {
+  --callout-color: 196,73,0;
+  --callout-icon: lucide-pencil;
+}
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"] {
+  --callout-color: 138,74,99;
+  --callout-icon: lucide-clipboard-list;
+}
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"] {
+  --callout-color: 196,73,0;
+  --callout-icon: lucide-help-circle;
+}
+.callout[data-callout="example"] {
+  --callout-color: 167,107,27;
+  --callout-icon: lucide-list;
+}
+.callout[data-callout="quote"],
+.callout[data-callout="cite"] {
+  --callout-color: 138,74,99;
+  --callout-icon: lucide-quote;
+}
+.callout[data-callout="bug"] {
+  --callout-color: 164,62,46;
+  --callout-icon: lucide-bug;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   UI CHROME — Sidebar, nav, tabs, ribbon, status bar
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* Nav file tree */
+.nav-folder-title-content,
+.nav-file-title-content {
+  color: var(--mire-fg-muted);
+}
+.nav-file-title.is-active .nav-file-title-content,
+.nav-folder-title.is-active .nav-folder-title-content {
+  color: var(--mire-fg);
+  font-weight: 500;
+}
+.tree-item-self.is-clickable:hover {
+  background: var(--nav-item-background-hover);
+}
+.tree-item-self.is-selected,
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  background: var(--nav-item-background-selected);
+  color: var(--mire-fg);
+}
+
+/* Collapse indicators */
+.tree-item-icon.collapse-icon {
+  color: var(--mire-fg-faint);
+}
+
+/* Tabs */
+.workspace-tab-header {
+  color: var(--mire-fg-muted);
+}
+.workspace-tab-header.is-active,
+.workspace-tab-header:hover {
+  color: var(--mire-fg);
+  background: rgba(196,73,0,0.05);
+}
+.workspace-tab-header.is-active::before {
+  background: transparent;
+}
+
+/* Pane dividers */
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  background: rgba(59,44,26,0.06);
+}
+
+/* Ribbon */
+.side-dock-ribbon-action {
+  color: var(--mire-fg-muted);
+}
+.side-dock-ribbon-action:hover {
+  color: var(--mire-orange);
+  background: rgba(196,73,0,0.06);
+}
+
+/* Status bar */
+.status-bar-item {
+  color: var(--mire-fg-muted);
+}
+.status-bar-item:hover {
+  color: var(--mire-fg);
+}
+
+/* Suggestion / quick switcher / modals */
+.suggestion-item.is-selected {
+  background: rgba(196,73,0,0.08);
+}
+.prompt .prompt-instruction {
+  color: var(--mire-fg-faint);
+}
+.prompt input[type="text"] {
+  border-color: rgba(59,44,26,0.12);
+}
+.prompt input[type="text"]:focus {
+  border-color: var(--mire-orange);
+  box-shadow: 0 0 0 2px rgba(196,73,0,0.12);
+}
+
+/* Settings / modals */
+.modal-container .modal {
+  background: var(--mire-bg-deep);
+  border: 1px solid rgba(59,44,26,0.10);
+  box-shadow: 0 8px 30px rgba(42,32,26,0.08);
+}
+.modal-container .modal-header {
+  border-bottom: 1px solid rgba(59,44,26,0.08);
+}
+.modal-container .modal-title {
+  color: var(--mire-fg);
+}
+.modal-container .modal-close-button {
+  color: var(--mire-fg-muted);
+}
+.modal-container .modal-close-button:hover {
+  color: var(--mire-orange);
+}
+
+/* Buttons */
+button.mod-cta {
+  background: var(--mire-orange);
+  color: var(--mire-bg-deep);
+}
+button.mod-cta:hover {
+  background: var(--mire-orange-soft);
+}
+button.mod-warning {
+  background: var(--mire-red);
+  color: var(--mire-bg-deep);
+}
+button {
+  border: 1px solid rgba(59,44,26,0.12);
+  color: var(--mire-fg);
+  background: var(--mire-bg-mid);
+}
+button:hover {
+  background: rgba(196,73,0,0.08);
+  border-color: rgba(59,44,26,0.18);
+}
+
+/* Dropdowns / inputs */
+.dropdown,
+select,
+input[type="text"],
+input[type="search"],
+textarea {
+  background: var(--mire-bg-mid);
+  border: 1px solid rgba(59,44,26,0.12);
+  color: var(--mire-fg);
+}
+.dropdown:focus,
+select:focus,
+input:focus,
+textarea:focus {
+  border-color: var(--mire-orange);
+  box-shadow: 0 0 0 2px rgba(196,73,0,0.10);
+}
+
+/* Toggle switches */
+.checkbox-container {
+  background: var(--mire-fg-faint);
+}
+.checkbox-container.is-enabled {
+  background: var(--mire-teal);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   PLUGINS & SPECIAL VIEWS
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* Graph view */
+.graph-view.color-fill {
+  color: var(--mire-orange);
+}
+.graph-view.color-fill-unresolved {
+  color: var(--mire-fg-faint);
+}
+.graph-view.color-fill-tag {
+  color: var(--mire-teal);
+}
+.graph-view.color-fill-attachment {
+  color: var(--mire-gold);
+}
+.graph-view.color-line {
+  color: rgba(125,107,88,0.15);
+}
+.graph-view.color-text {
+  color: var(--mire-fg-muted);
+}
+
+/* Canvas cards */
+.canvas-node-container {
+  background: var(--mire-bg-deep);
+  border: 1px solid rgba(59,44,26,0.10);
+}
+.canvas-node-placeholder {
+  color: var(--mire-fg-faint);
+}
+
+/* PDF viewer */
+.pdf-viewer .page {
+  background: var(--mire-bg-deep);
+}
+
+/* Audio / video recorder */
+.audio-recorder-button,
+.video-recorder-button {
+  background: var(--mire-bg-mid);
+  color: var(--mire-fg-muted);
+}
+.audio-recorder-button:hover,
+.video-recorder-button:hover {
+  color: var(--mire-orange);
+}
+
+/* Bookmarks */
+.bookmark {
+  color: var(--mire-fg-muted);
+}
+.bookmark:hover {
+  color: var(--mire-fg);
+  background: rgba(196,73,0,0.06);
+}
+
+/* Outline / breadcrumbs */
+.outline .tree-item-inner {
+  color: var(--mire-fg-muted);
+}
+.outline .tree-item-inner:hover {
+  color: var(--mire-fg);
+}
+
+/* Backlinks */
+.backlink-pane .search-result-file-title {
+  color: var(--mire-fg);
+}
+.backlink-pane .search-result-file-matches {
+  color: var(--mire-fg-muted);
+}
+
+/* Search results */
+.search-result-file-title {
+  color: var(--mire-fg);
+}
+.search-result-file-matches {
+  color: var(--mire-fg-muted);
+}
+.search-result-file-match:hover {
+  background: rgba(196,73,0,0.06);
+}
+.search-result-file-matched-text {
+  background: rgba(196,73,0,0.18);
+  color: var(--mire-fg);
+}
+
+/* Tag pane */
+.tag-pane-tag {
+  color: var(--tag-color);
+  background: var(--tag-background);
+}
+.tag-pane-tag:hover {
+  background: var(--tag-background-hover);
+}
+
+/* File properties / metadata */
+.metadata-property-key {
+  color: var(--mire-fg-muted);
+}
+.metadata-property-value {
+  color: var(--mire-fg);
+}
+.metadata-add-button {
+  color: var(--mire-fg-faint);
+}
+.metadata-add-button:hover {
+  color: var(--mire-orange);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   SCROLLBARS
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(125,107,88,0.18);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active {
+  background: rgba(125,107,88,0.30);
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   MOBILE / NARROW LAYOUT
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+.is-mobile .workspace-drawer {
+  background: var(--mire-bg-deep);
+}
+.is-mobile .workspace-drawer-header {
+  background: var(--mire-bg-warm);
+}
+.is-mobile .workspace-drawer-header-name {
+  color: var(--mire-fg);
+}
+.is-mobile .workspace-drawer-header-icon {
+  color: var(--mire-fg-muted);
+}
+.is-mobile .workspace-drawer-tab-option {
+  color: var(--mire-fg-muted);
+}
+.is-mobile .workspace-drawer-tab-option.is-active {
+  color: var(--mire-orange);
+  border-bottom: 2px solid var(--mire-orange);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   ACTIVE LEAF ACCENT
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+.workspace-leaf.mod-active .view-header {
+  border-bottom: 2px solid var(--mire-orange);
+}
+.workspace-leaf.mod-active .view-header-title {
+  color: var(--mire-fg);
+}
+.view-header {
+  background: var(--mire-bg-warm);
+}
+.view-header-title {
+  color: var(--mire-fg-muted);
+}
+.view-header-icon {
+  color: var(--mire-fg-faint);
+}
+.view-header-icon:hover {
+  color: var(--mire-orange);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   AGGRESSIVE OVERRIDES — eliminate all remaining blue/purple from Obsidian defaults
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Properties / Metadata (frontmatter) ── */
+.metadata-property-icon,
+.metadata-property-value-icon,
+.multi-select-pill {
+  color: var(--mire-orange) !important;
+  background: rgba(196,73,0,0.08) !important;
+  border-color: rgba(196,73,0,0.15) !important;
+}
+.multi-select-pill-remove-button {
+  color: var(--mire-orange-soft) !important;
+}
+.multi-select-pill-remove-button:hover {
+  color: var(--mire-red) !important;
+}
+
+/* Metadata links */
+.metadata-link,
+.metadata-link .internal-link,
+.metadata-property-value .internal-link,
+.metadata-property-value a,
+.metadata-property-value a.internal-link,
+.metadata-property-value a.external-link,
+.metadata-property a,
+.metadata-property a.internal-link,
+.metadata-property a.external-link {
+  color: var(--mire-orange) !important;
+  text-decoration-color: rgba(196,73,0,0.30) !important;
+}
+.metadata-link:hover,
+.metadata-link .internal-link:hover,
+.metadata-property-value .internal-link:hover,
+.metadata-property-value a:hover,
+.metadata-property-value a.internal-link:hover,
+.metadata-property-value a.external-link:hover,
+.metadata-property a:hover,
+.metadata-property a.internal-link:hover,
+.metadata-property a.external-link:hover {
+  color: var(--mire-orange-soft) !important;
+  text-decoration-color: var(--mire-orange) !important;
+}
+
+/* ── Tags (in all contexts) ── */
+.multi-select-pill-content,
+.tag-pane-tag-text,
+.multi-select-pill .internal-link,
+.tag-pane-tag .internal-link,
+a.tag,
+.cm-s-obsidian .cm-hashtag,
+.cm-s-obsidian .cm-tag,
+.cm-s-obsidian span.cm-hashtag {
+  color: #A76B1B !important;
+}
+.multi-select-pill,
+.metadata-property[data-property-key="tags"] .multi-select-pill,
+.metadata-property-value .multi-select-pill {
+  color: var(--tag-color) !important;
+  background: var(--tag-background) !important;
+  border-color: var(--tag-border-color) !important;
+}
+.metadata-property[data-property-key="tags"] .multi-select-pill-content,
+.metadata-property-value .multi-select-pill-content,
+.metadata-property-value .multi-select-pill-content span,
+.metadata-property-value .multi-select-pill-content a,
+.metadata-property[data-property-key="tags"] .multi-select-pill-remove-button,
+.metadata-property-value .multi-select-pill-remove-button {
+  color: var(--tag-color) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.metadata-property[data-property-key="tags"] .multi-select-pill:hover,
+.metadata-property-value .multi-select-pill:hover {
+  background: var(--tag-background-hover) !important;
+}
+a.tag:hover {
+  color: #8F5C18 !important;
+}
+
+/* ── External links (all contexts) ── */
+a.external-link,
+.external-link,
+.markdown-rendered a.external-link,
+.markdown-source-view a.external-link,
+.cm-s-obsidian .cm-url,
+.cm-s-obsidian .cm-link.cm-url,
+.cm-s-obsidian .cm-formatting-link + .cm-url,
+.markdown-source-view.mod-cm6 .cm-url,
+.markdown-source-view.mod-cm6 .cm-link.cm-url {
+  color: var(--mire-orange) !important;
+  text-decoration-color: rgba(196,73,0,0.30) !important;
+}
+a.external-link:hover,
+.external-link:hover,
+.external-link:visited,
+.markdown-rendered a.external-link:hover,
+.markdown-rendered a.external-link:visited,
+.markdown-source-view a.external-link:hover,
+.markdown-source-view a.external-link:visited,
+.cm-s-obsidian .cm-url:hover,
+.cm-s-obsidian .cm-link.cm-url:hover,
+.markdown-source-view.mod-cm6 .cm-url:hover {
+  color: var(--mire-orange-soft) !important;
+  text-decoration-color: var(--mire-orange) !important;
+}
+
+/* External link icon */
+.external-link::after {
+  filter: hue-rotate(160deg) saturate(1.5) brightness(0.8) !important;
+}
+
+/* ── Selected / Active nav items ── */
+/* Rely on --nav-item-* CSS variables set in .theme-light instead of overriding them */
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  background: var(--nav-item-background-selected) !important;
+}
+.nav-file-title.is-active .nav-file-title-content,
+.nav-folder-title.is-active .nav-folder-title-content {
+  color: var(--nav-item-color-selected) !important;
+}
+
+/* ── Search highlight / matches ── */
+.search-result-file-matched-text,
+.search-result-file-title .search-result-file-matched-text {
+  background: rgba(196,73,0,0.15) !important;
+  color: var(--mire-fg) !important;
+}
+
+/* ── Sync status / other status indicators ── */
+.sync-status-icon.mod-working,
+.status-bar-item.mod-syncing {
+  color: var(--mire-teal) !important;
+}
+
+/* ── Misc Obsidian accent colors ── */
+.text-icon-button,
+.text-icon-button:hover,
+.clickable-icon,
+.clickable-icon:hover,
+.document-search-container,
+.document-search-button {
+  color: var(--mire-fg-muted) !important;
+}
+
+/* Selection highlight in properties */
+.metadata-property-value.is-selected {
+  background: rgba(196,73,0,0.08) !important;
+  border-color: var(--mire-orange) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   HOVER POPOVER — file hover preview panel
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.popover {
+  background: var(--mire-bg-mid) !important;
+  border: 1px solid rgba(59,44,26,0.10) !important;
+  box-shadow: 0 4px 20px rgba(42,32,26,0.08) !important;
+}
+.popover .nav-file-title,
+.popover .nav-folder-title {
+  color: var(--mire-fg) !important;
+}
+.popover .nav-file-title-content,
+.popover .nav-folder-title-content {
+  color: var(--mire-fg) !important;
+}
+.popover .nav-file-title:hover,
+.popover .nav-folder-title:hover {
+  background: var(--nav-item-background-hover) !important;
+}
+.popover .nav-file-title.is-active,
+.popover .nav-folder-title.is-active {
+  background: var(--nav-item-background-selected) !important;
+  color: var(--nav-item-color-selected) !important;
+}
+.popover .markdown-embed-link,
+.popover .internal-link {
+  color: var(--mire-orange) !important;
+}
+.popover .metadata-container {
+  background: transparent !important;
+}
+.popover .metadata-property-key {
+  color: var(--mire-fg-muted) !important;
+}
+.popover .metadata-property-value {
+  color: var(--mire-fg) !important;
+}
+.popover .metadata-link,
+.popover a.internal-link {
+  color: var(--mire-orange) !important;
+}
+.popover .tag {
+  color: var(--tag-color) !important;
+  background: var(--tag-background) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   TOOLTIPS — Obsidian hover labels and metadata helper bubbles
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.tooltip,
+.tooltip .tooltip-inner,
+.metadata-tooltip,
+.metadata-tooltip .tooltip-inner {
+  color: var(--tooltip-color) !important;
+  background: var(--tooltip-background) !important;
+  border-color: rgba(42,32,26,0.18) !important;
+}
+.tooltip.mod-right .tooltip-arrow,
+.tooltip.mod-left .tooltip-arrow,
+.tooltip.mod-top .tooltip-arrow,
+.tooltip.mod-bottom .tooltip-arrow {
+  border-color: var(--tooltip-background) !important;
+}
