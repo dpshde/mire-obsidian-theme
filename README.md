@@ -28,9 +28,11 @@ Once published, install it from **Settings → Appearance → Themes → Manage*
 3. Place both files in that folder.
 4. In Obsidian, go to **Settings → Appearance → Themes** and select **Mire**.
 
-## Credits
+## Inspiration
 
-Inspired by [monarcode/mire-theme-zed](https://github.com/monarcode/mire-theme-zed).
+Mire for Obsidian is inspired by [Mire for Zed](https://github.com/monarcode/mire-theme-zed) by MONARCH. The Obsidian theme adapts the same warm, restrained atmosphere for Obsidian's editor, reading view, metadata UI, and app chrome while making Obsidian-specific choices for links, tags, callouts, popovers, and navigation states.
+
+This project is an independent Obsidian theme and is not an official port or affiliated project.
 
 ## License
 
